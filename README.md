@@ -3,7 +3,7 @@ Rashiduzzaman (191-15-2655)*/
 
 #include<bits/stdc++.h>
 using namespace std;
-
+int max(int a, int b);
 int knapSack(int W, int wt[], int val[], int n)
 {
     int i, w;
@@ -22,10 +22,9 @@ int knapSack(int W, int wt[], int val[], int n)
             {
                 K[i][w] = K[i - 1][w];
             }
-            printf("%d    ",K[i][w]);
+            cout<<K[i][w]<<"    ";
         }
-        printf("\n")     ;
-
+        cout<<endl;
     }
     return K[n][W-1];
 }
